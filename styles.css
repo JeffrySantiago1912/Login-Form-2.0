@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Noto+Sans&family=Open+Sans:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: sans-serif;
+    justify-content: center;
+    background: url(fondoBackground.jpg);
+    background-size: cover;
+    
+}
+
+.container{
+    position: relative;
+    width: 400px;
+    background: white;
+    padding: 60px 40px;
+}
+
+header{
+
+    font-size: 40px;
+    margin-bottom: 60px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.input-field, form .button{
+    margin: 25px;
+    position: relative;
+    height: 50px;
+    width: 100%;
+    right: 25px;
+}
+
+.input-field input{
+    height: 100%;
+    width: 100%;
+    border: 1px solid silver;
+    padding-left: 15px;
+    outline: none;
+    font-size: 19px;
+}
+
+.input-field label{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: grey;
+    font-size: 18px;
+    transition: .4s;
+}
+
+input:focus ~ label,
+input:valid ~ label{
+    transform: translateY(-33px);
+    background: white;
+    font-size: 16px;
+    color: #1DA1F2
+}
+
+form .button{
+    margin-top: 30px;
+    overflow: hidden;
+    z-index: 111;
+}
+
+.button .inner{
+    position: absolute;
+    height: 100%;
+    width: 300%;
+    left: -100%;
+    z-index: -1;
+    background: -webkit-linear-gradient(right, #00dbde, #fc00ff);
+}
+
+.button button{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
